@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$primary-color: #2fa8cc;
+$secondary-color: #f4f4f4;
+$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+
+nav {
+  float: right;
+  padding: 10px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-flex;
+  margin-left: 40px;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+body {
+  margin: 0;
+  background: #222;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 100px; /* Fixed width for the labels */
+  text-align: right;
+  margin-right: 10px;
+}
+
+.form-group input {
+  flex: 1;
+}
+
+
+.card-anim {
+  border-radius: 10px;
+  box-shadow: 0 8px 12px rgba(24, 24, 24, 0.4);
+  background-color: #fff;
+  padding: 20px; 
+  flex: 0 0 calc(33.33% - 100px); 
+  transform: scale(1); // Add a hover effect, increase the scale for a zoom-in effect
+  transition: transform 0.2s ease; // Add a smooth transition for the hover effect
+}
+
+.card-anim:hover {
+  transform: scale(1.15); // Add a hover effect, increase the scale for a zoom-in effect
+  transition: transform 0.5s ease; // Add a smooth transition for the hover effect
+}
+
+.card-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px; /* Adjust the gap as needed between the cards */
+}
+
+.contents {
+  min-width: 1200px;
+  height: 100%;
+  min-height: 640px;
+  margin: 0 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contents div[class^="text-area-"] {
+  background-color: #271f1d;
+  width: 660px;
+  padding: 30px 30px 40px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  color: #f4f4f4;
+}
