@@ -43,7 +43,6 @@ jobs:
          - name: Create and upload artifact for GitHub Pages
            uses: actions/upload-pages-artifact@v2
            with:
-             name: 'wee_artifact' # Optional, custom artifact name
              path: './dist' # Specify the path to your static assets directory
 
    # Deploy job
