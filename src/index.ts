@@ -1,5 +1,6 @@
 import { loadNavbar } from "./shared/navbar"
 import introImg from './assets/cover_image.jpg'
+import historyImg from './assets/Monster_attack_1.jpg'
 
 import FormValidation from "./formValidation"
 
@@ -15,6 +16,12 @@ function loadImages() {
     introImage.src = introImg
     introImage.width = 1200;
     introImage.height = 590;
+
+    const historyImage = document.getElementById("history-img") as HTMLImageElement;
+    historyImage.src = historyImg
+    historyImage.width = 1200;
+    historyImage.height = 590;
+
 }
 
 

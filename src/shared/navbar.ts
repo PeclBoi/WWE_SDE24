@@ -7,11 +7,9 @@ export function loadNavbar() {
     const navbarList = document.createElement("ul");
     
     const navbarElements = [
-      "Home:/",
-      "Weapons:weapons.html",
-      "Monster:moster.html",
+      "Home:index.html",
       "Armor:armor.html",
-      "Bookmarks:bookmark.html"
+      "About:about.html"
     ];
     
     navbarElements.forEach(element => {

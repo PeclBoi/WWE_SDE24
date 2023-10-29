@@ -51,13 +51,14 @@ nav a:hover {
 
 body {
   margin: 0;
-  background: #222;
+  background: #e6e6e6;
   font-family: "Work Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 4;
 }
 
 header {
   background: #55d6aa;
+  margin-bottom: 12px;
 }
 
 header::after {
@@ -75,7 +76,7 @@ header::after {
   background-color: #f7f7f7;
   border-radius: 10px;
   padding: 20px;
-  margin-top: 20px;
+  margin: 20px 0px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -130,14 +131,80 @@ header::after {
 }
 
 .contents div[class^=text-area-] {
-  background-color: #271f1d;
+  background-color: #473834;
   width: 660px;
+  border-radius: 6px;
   padding: 30px 30px 40px;
+  margin: 0 0 20px 20px;
   box-sizing: border-box;
+  box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);
   position: absolute;
   bottom: 0;
   color: #f4f4f4;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,YAAA;EACA,aAAA;AAJF;;AAOA;EACE,SAAA;EACA,UAAA;EACA,gBAAA;AAJF;;AAOA;EACE,oBAAA;EACA,iBAAA;AAJF;;AAOA;EACE,WAAA;EACA,qBAAA;EACA,yBAAA;EACA,eAAA;AAJF;;AAOA;EACE,WAAA;AAJF;;AAOA;EACE,SAAA;EACA,gBAAA;EACA,oCAAA;EACA,gBAAA;AAJF;;AAOA;EACE,mBAAA;AAJF;;AAOA;EACE,WAAA;EACA,cAAA;EACA,WAAA;AAJF;;AAOA;EACE,UAAA;EACA,cAAA;AAJF;;AAOA;EACE,yBAAA;EACA,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,uCAAA;AAJF;;AAOA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,mBAAA;AAJF;;AAOA;EACE,YAAA,EAAA,+BAAA;EACA,iBAAA;EACA,kBAAA;AAJF;;AAOA;EACE,OAAA;AAJF;;AAQA;EACE,mBAAA;EACA,4CAAA;EACA,sBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,+BAAA;AALF;;AAQA;EACE,sBAAA;EACA,+BAAA;AALF;;AAQA;EACE,aAAA;EACA,UAAA;EACA,cAAA;EACA,eAAA;EACA,8BAAA;EACA,SAAA,EAAA,+CAAA;AALF;;AAQA;EACE,iBAAA;EACA,YAAA;EACA,iBAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;AALF;;AAQA;EACE,yBAAA;EACA,YAAA;EACA,uBAAA;EACA,sBAAA;EACA,kBAAA;EACA,SAAA;EACA,cAAA;AALF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\nnav {\r\n  float: right;\r\n  padding: 10px;\r\n}\r\n\r\nnav ul {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\nnav li {\r\n  display: inline-flex;\r\n  margin-left: 40px;\r\n}\r\n\r\nnav a {\r\n  color: #444;\r\n  text-decoration: none;\r\n  text-transform: uppercase;\r\n  font-size: 16px;\r\n}\r\n\r\nnav a:hover {\r\n  color: #000;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  background: #222;\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 400;\r\n}\r\n\r\nheader {\r\n  background: #55d6aa;\r\n}\r\n\r\nheader::after {\r\n  content: '';\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.container {\r\n  width: 80%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.card {\r\n  background-color: #f7f7f7;\r\n  border-radius: 10px;\r\n  padding: 20px;\r\n  margin-top: 20px;\r\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.form-group {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.form-group label {\r\n  width: 100px; /* Fixed width for the labels */\r\n  text-align: right;\r\n  margin-right: 10px;\r\n}\r\n\r\n.form-group input {\r\n  flex: 1;\r\n}\r\n\r\n\r\n.card-anim {\r\n  border-radius: 10px;\r\n  box-shadow: 0 8px 12px rgba(24, 24, 24, 0.4);\r\n  background-color: #fff;\r\n  padding: 20px; \r\n  flex: 0 0 calc(33.33% - 100px); \r\n  transform: scale(1); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.2s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-anim:hover {\r\n  transform: scale(1.15); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.5s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-container {\r\n  display: flex;\r\n  width: 80%;\r\n  margin: 0 auto;\r\n  flex-wrap: wrap;\r\n  justify-content: space-between;\r\n  gap: 30px; /* Adjust the gap as needed between the cards */\r\n}\r\n\r\n.contents {\r\n  min-width: 1200px;\r\n  height: 100%;\r\n  min-height: 640px;\r\n  margin: 0 0 60px;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n\r\n.contents div[class^=\"text-area-\"] {\r\n  background-color: #271f1d;\r\n  width: 660px;\r\n  padding: 30px 30px 40px;\r\n  box-sizing: border-box;\r\n  position: absolute;\r\n  bottom: 0;\r\n  color: #f4f4f4;\r\n}"],"sourceRoot":""}]);
+}
+
+/* CSS */
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}
+
+.sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,YAAA;EACA,aAAA;AAJF;;AAOA;EACE,SAAA;EACA,UAAA;EACA,gBAAA;AAJF;;AAOA;EACE,oBAAA;EACA,iBAAA;AAJF;;AAOA;EACE,WAAA;EACA,qBAAA;EACA,yBAAA;EACA,eAAA;AAJF;;AAOA;EACE,WAAA;AAJF;;AAOA;EACE,SAAA;EACA,mBAAA;EACA,oCAAA;EACA,cAAA;AAJF;;AAOA;EACE,mBAAA;EACA,mBAAA;AAJF;;AAOA;EACE,WAAA;EACA,cAAA;EACA,WAAA;AAJF;;AAOA;EACE,UAAA;EACA,cAAA;AAJF;;AAOA;EACE,yBAAA;EACA,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,uCAAA;AAJF;;AAQA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,mBAAA;AALF;;AAQA;EACE,YAAA,EAAA,+BAAA;EACA,iBAAA;EACA,kBAAA;AALF;;AAQA;EACE,OAAA;AALF;;AASA;EACE,mBAAA;EACA,4CAAA;EACA,sBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,+BAAA;AANF;;AASA;EACE,sBAAA;EACA,+BAAA;AANF;;AASA;EACE,aAAA;EACA,UAAA;EACA,cAAA;EACA,eAAA;EACA,8BAAA;EACA,SAAA,EAAA,+CAAA;AANF;;AASA;EACE,iBAAA;EACA,YAAA;EACA,iBAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;AANF;;AASA;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACA,uBAAA;EACA,qBAAA;EACA,sBAAA;EACA,+CAAA;EACA,kBAAA;EACA,SAAA;EACA,cAAA;AANF;;AASA,QAAA;AACA;EACE,gBAAA;EACA,yBAAA;EACA,wCAAA;EACA,kBAAA;EACA,yCAAA;EACA,sBAAA;EACA,WAAA;EACA,eAAA;EACA,qBAAA;EACA,sHAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,iBAAA;EACA,kBAAA;EACA,kBAAA;EACA,qBAAA;EACA,iBAAA;EACA,yBAAA;EACA,0BAAA;EACA,sBAAA;EACA,mBAAA;AANF;;AASA;EACE,gBAAA;EACA,aAAA;AANF;;AASA;EACE,yBAAA;AANF;;AASA;EACE,4CAAA;EACA,aAAA;AANF;;AASA;EACE,yBAAA;EACA,mCAAA;EACA,+BAAA;EACA,eAAA;AANF;;AASA;EACE,yBAAA;EACA,+CAAA;AANF;;AASA;EACE,YAAA;EACA,eAAA;EACA,UAAA;EACA,SAAA;EACA,UAAA;EACA,gBAAA;EACA,kBAAA;EACA,cAAA;AANF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\nnav {\r\n  float: right;\r\n  padding: 10px;\r\n}\r\n\r\nnav ul {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\nnav li {\r\n  display: inline-flex;\r\n  margin-left: 40px;\r\n}\r\n\r\nnav a {\r\n  color: #444;\r\n  text-decoration: none;\r\n  text-transform: uppercase;\r\n  font-size: 16px;\r\n}\r\n\r\nnav a:hover {\r\n  color: #000;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  background: #e6e6e6;\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 4;\r\n}\r\n\r\nheader {\r\n  background: #55d6aa;\r\n  margin-bottom: 12px;\r\n}\r\n\r\nheader::after {\r\n  content: '';\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.container {\r\n  width: 80%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.card {\r\n  background-color: #f7f7f7;\r\n  border-radius: 10px;\r\n  padding: 20px;\r\n  margin: 20px 0px;\r\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n\r\n}\r\n\r\n.form-group {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.form-group label {\r\n  width: 100px; /* Fixed width for the labels */\r\n  text-align: right;\r\n  margin-right: 10px;\r\n}\r\n\r\n.form-group input {\r\n  flex: 1;\r\n}\r\n\r\n\r\n.card-anim {\r\n  border-radius: 10px;\r\n  box-shadow: 0 8px 12px rgba(24, 24, 24, 0.4);\r\n  background-color: #fff;\r\n  padding: 20px; \r\n  flex: 0 0 calc(33.33% - 100px); \r\n  transform: scale(1); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.2s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-anim:hover {\r\n  transform: scale(1.15); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.5s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-container {\r\n  display: flex;\r\n  width: 80%;\r\n  margin: 0 auto;\r\n  flex-wrap: wrap;\r\n  justify-content: space-between;\r\n  gap: 30px; /* Adjust the gap as needed between the cards */\r\n}\r\n\r\n.contents {\r\n  min-width: 1200px;\r\n  height: 100%;\r\n  min-height: 640px;\r\n  margin: 0 0 60px;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n\r\n.contents div[class^=\"text-area-\"] {\r\n  background-color: #473834;\r\n  width: 660px;\r\n  border-radius: 6px;\r\n  padding:30px 30px 40px;\r\n  margin: 0 0 20px 20px;\r\n  box-sizing: border-box;\r\n  box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);\r\n  position: absolute;\r\n  bottom: 0;\r\n  color: #f4f4f4;\r\n}\r\n\r\n/* CSS */\r\n.button-3 {\r\n  appearance: none;\r\n  background-color: #2ea44f;\r\n  border: 1px solid rgba(27, 31, 35, .15);\r\n  border-radius: 6px;\r\n  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;\r\n  box-sizing: border-box;\r\n  color: #fff;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  font-family: -apple-system,system-ui,\"Segoe UI\",Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\";\r\n  font-size: 14px;\r\n  font-weight: 600;\r\n  line-height: 20px;\r\n  padding: 6px 16px;\r\n  position: relative;\r\n  text-align: center;\r\n  text-decoration: none;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n  touch-action: manipulation;\r\n  vertical-align: middle;\r\n  white-space: nowrap;\r\n}\r\n\r\n.button-3:focus:not(:focus-visible):not(.focus-visible) {\r\n  box-shadow: none;\r\n  outline: none;\r\n}\r\n\r\n.button-3:hover {\r\n  background-color: #2c974b;\r\n}\r\n\r\n.button-3:focus {\r\n  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;\r\n  outline: none;\r\n}\r\n\r\n.button-3:disabled {\r\n  background-color: #94d3a2;\r\n  border-color: rgba(27, 31, 35, .1);\r\n  color: rgba(255, 255, 255, .8);\r\n  cursor: default;\r\n}\r\n\r\n.button-3:active {\r\n  background-color: #298e46;\r\n  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;\r\n}\r\n\r\n.sidenav {\r\n  width: 130px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 20px;\r\n  left: 10px;\r\n  background: #eee;\r\n  overflow-x: hidden;\r\n  padding: 8px 0;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -653,11 +720,10 @@ function loadNavbar() {
     var navbar = document.createElement("nav");
     var navbarList = document.createElement("ul");
     var navbarElements = [
-        "Home:/",
+        "Home:index.html",
         "Weapons:weapons.html",
         "Monster:moster.html",
         "Armor:armor.html",
-        "Bookmarks:bookmark.html"
     ];
     navbarElements.forEach(function (element) {
         var nameFilePair = element.split(":");
@@ -672,6 +738,16 @@ function loadNavbar() {
     navbarContainer.appendChild(navbar);
 }
 
+
+/***/ }),
+
+/***/ "./src/assets/Monster_attack_1.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/Monster_attack_1.jpg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "1126e4a2b41fd6db6774.jpg";
 
 /***/ }),
 
@@ -802,8 +878,10 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/navbar */ "./src/shared/navbar.ts");
 /* harmony import */ var _assets_cover_image_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/cover_image.jpg */ "./src/assets/cover_image.jpg");
-/* harmony import */ var _formValidation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./formValidation */ "./src/formValidation.ts");
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _assets_Monster_attack_1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/Monster_attack_1.jpg */ "./src/assets/Monster_attack_1.jpg");
+/* harmony import */ var _formValidation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./formValidation */ "./src/formValidation.ts");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+
 
 
 
@@ -815,10 +893,14 @@ function loadImages() {
     introImage.src = _assets_cover_image_jpg__WEBPACK_IMPORTED_MODULE_1__;
     introImage.width = 1200;
     introImage.height = 590;
+    var historyImage = document.getElementById("history-img");
+    historyImage.src = _assets_Monster_attack_1_jpg__WEBPACK_IMPORTED_MODULE_2__;
+    historyImage.width = 1200;
+    historyImage.height = 590;
 }
 var form = document.getElementById('myForm');
 form.addEventListener('submit', function (event) {
-    var formValidation = new _formValidation__WEBPACK_IMPORTED_MODULE_2__["default"]();
+    var formValidation = new _formValidation__WEBPACK_IMPORTED_MODULE_3__["default"]();
     event.preventDefault();
     formValidation.validateForm();
 });

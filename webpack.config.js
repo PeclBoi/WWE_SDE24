@@ -10,7 +10,6 @@ module.exports = {
   {
     main: './src/index.ts',
     armor: './src/armor.ts',
-    bookmark: './src/bookmarks.ts'
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -48,19 +47,14 @@ module.exports = {
   plugins: [
     //new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/html/index.html',
       filename: 'index.html',
       chunks: ['main'],
     }),
     new HtmlWebpackPlugin({
-      template: './src/armor.html',
+      template: './src/html/armor.html',
       filename: 'armor.html',
       chunks: ['armor'],
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/bookmark.html',
-      filename: 'bookmark.html',
-      chunks: ['bookmark'],
     }),
   ],
 };
