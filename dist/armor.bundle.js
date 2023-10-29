@@ -22,7 +22,25 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `nav {
+___CSS_LOADER_EXPORT___.push([module.id, `@media (max-width: 1920px) {
+  .monster-img {
+    width: 50%;
+    height: auto;
+  }
+}
+@media (max-width: 1440px) {
+  .monster-img {
+    width: 70%;
+    height: auto;
+  }
+}
+@media (max-width: 360px) {
+  .monster-img {
+    width: 20%;
+    height: auto;
+  }
+}
+nav {
   float: right;
   padding: 10px;
 }
@@ -88,7 +106,8 @@ header::after {
 }
 
 .form-group label {
-  width: 100px; /* Fixed width for the labels */
+  width: 100px;
+  /* Fixed width for the labels */
   text-align: right;
   margin-right: 10px;
 }
@@ -118,7 +137,13 @@ header::after {
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px; /* Adjust the gap as needed between the cards */
+  gap: 30px;
+  /* Adjust the gap as needed between the cards */
+}
+
+.title {
+  font-size: larger;
+  font-weight: 700;
 }
 
 .contents {
@@ -196,15 +221,21 @@ header::after {
 }
 
 .sidenav {
-  width: 130px;
+  width: 170px;
   position: fixed;
   z-index: 1;
-  top: 20px;
-  left: 10px;
-  background: #eee;
+  top: 100px;
+  border-radius: 12px;
+  right: 0px;
+  background: #ffffff;
   overflow-x: hidden;
-  padding: 8px 0;
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,YAAA;EACA,aAAA;AAJF;;AAOA;EACE,SAAA;EACA,UAAA;EACA,gBAAA;AAJF;;AAOA;EACE,oBAAA;EACA,iBAAA;AAJF;;AAOA;EACE,WAAA;EACA,qBAAA;EACA,yBAAA;EACA,eAAA;AAJF;;AAOA;EACE,WAAA;AAJF;;AAOA;EACE,SAAA;EACA,mBAAA;EACA,oCAAA;EACA,cAAA;AAJF;;AAOA;EACE,mBAAA;EACA,mBAAA;AAJF;;AAOA;EACE,WAAA;EACA,cAAA;EACA,WAAA;AAJF;;AAOA;EACE,UAAA;EACA,cAAA;AAJF;;AAOA;EACE,yBAAA;EACA,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,uCAAA;AAJF;;AAQA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,mBAAA;AALF;;AAQA;EACE,YAAA,EAAA,+BAAA;EACA,iBAAA;EACA,kBAAA;AALF;;AAQA;EACE,OAAA;AALF;;AASA;EACE,mBAAA;EACA,4CAAA;EACA,sBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,+BAAA;AANF;;AASA;EACE,sBAAA;EACA,+BAAA;AANF;;AASA;EACE,aAAA;EACA,UAAA;EACA,cAAA;EACA,eAAA;EACA,8BAAA;EACA,SAAA,EAAA,+CAAA;AANF;;AASA;EACE,iBAAA;EACA,YAAA;EACA,iBAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;AANF;;AASA;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACA,uBAAA;EACA,qBAAA;EACA,sBAAA;EACA,+CAAA;EACA,kBAAA;EACA,SAAA;EACA,cAAA;AANF;;AASA,QAAA;AACA;EACE,gBAAA;EACA,yBAAA;EACA,wCAAA;EACA,kBAAA;EACA,yCAAA;EACA,sBAAA;EACA,WAAA;EACA,eAAA;EACA,qBAAA;EACA,sHAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,iBAAA;EACA,kBAAA;EACA,kBAAA;EACA,qBAAA;EACA,iBAAA;EACA,yBAAA;EACA,0BAAA;EACA,sBAAA;EACA,mBAAA;AANF;;AASA;EACE,gBAAA;EACA,aAAA;AANF;;AASA;EACE,yBAAA;AANF;;AASA;EACE,4CAAA;EACA,aAAA;AANF;;AASA;EACE,yBAAA;EACA,mCAAA;EACA,+BAAA;EACA,eAAA;AANF;;AASA;EACE,yBAAA;EACA,+CAAA;AANF;;AASA;EACE,YAAA;EACA,eAAA;EACA,UAAA;EACA,SAAA;EACA,UAAA;EACA,gBAAA;EACA,kBAAA;EACA,cAAA;AANF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\nnav {\r\n  float: right;\r\n  padding: 10px;\r\n}\r\n\r\nnav ul {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\nnav li {\r\n  display: inline-flex;\r\n  margin-left: 40px;\r\n}\r\n\r\nnav a {\r\n  color: #444;\r\n  text-decoration: none;\r\n  text-transform: uppercase;\r\n  font-size: 16px;\r\n}\r\n\r\nnav a:hover {\r\n  color: #000;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  background: #e6e6e6;\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 4;\r\n}\r\n\r\nheader {\r\n  background: #55d6aa;\r\n  margin-bottom: 12px;\r\n}\r\n\r\nheader::after {\r\n  content: '';\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.container {\r\n  width: 80%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.card {\r\n  background-color: #f7f7f7;\r\n  border-radius: 10px;\r\n  padding: 20px;\r\n  margin: 20px 0px;\r\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n\r\n}\r\n\r\n.form-group {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.form-group label {\r\n  width: 100px; /* Fixed width for the labels */\r\n  text-align: right;\r\n  margin-right: 10px;\r\n}\r\n\r\n.form-group input {\r\n  flex: 1;\r\n}\r\n\r\n\r\n.card-anim {\r\n  border-radius: 10px;\r\n  box-shadow: 0 8px 12px rgba(24, 24, 24, 0.4);\r\n  background-color: #fff;\r\n  padding: 20px; \r\n  flex: 0 0 calc(33.33% - 100px); \r\n  transform: scale(1); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.2s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-anim:hover {\r\n  transform: scale(1.15); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.5s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-container {\r\n  display: flex;\r\n  width: 80%;\r\n  margin: 0 auto;\r\n  flex-wrap: wrap;\r\n  justify-content: space-between;\r\n  gap: 30px; /* Adjust the gap as needed between the cards */\r\n}\r\n\r\n.contents {\r\n  min-width: 1200px;\r\n  height: 100%;\r\n  min-height: 640px;\r\n  margin: 0 0 60px;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n\r\n.contents div[class^=\"text-area-\"] {\r\n  background-color: #473834;\r\n  width: 660px;\r\n  border-radius: 6px;\r\n  padding:30px 30px 40px;\r\n  margin: 0 0 20px 20px;\r\n  box-sizing: border-box;\r\n  box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);\r\n  position: absolute;\r\n  bottom: 0;\r\n  color: #f4f4f4;\r\n}\r\n\r\n/* CSS */\r\n.button-3 {\r\n  appearance: none;\r\n  background-color: #2ea44f;\r\n  border: 1px solid rgba(27, 31, 35, .15);\r\n  border-radius: 6px;\r\n  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;\r\n  box-sizing: border-box;\r\n  color: #fff;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  font-family: -apple-system,system-ui,\"Segoe UI\",Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\";\r\n  font-size: 14px;\r\n  font-weight: 600;\r\n  line-height: 20px;\r\n  padding: 6px 16px;\r\n  position: relative;\r\n  text-align: center;\r\n  text-decoration: none;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n  touch-action: manipulation;\r\n  vertical-align: middle;\r\n  white-space: nowrap;\r\n}\r\n\r\n.button-3:focus:not(:focus-visible):not(.focus-visible) {\r\n  box-shadow: none;\r\n  outline: none;\r\n}\r\n\r\n.button-3:hover {\r\n  background-color: #2c974b;\r\n}\r\n\r\n.button-3:focus {\r\n  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;\r\n  outline: none;\r\n}\r\n\r\n.button-3:disabled {\r\n  background-color: #94d3a2;\r\n  border-color: rgba(27, 31, 35, .1);\r\n  color: rgba(255, 255, 255, .8);\r\n  cursor: default;\r\n}\r\n\r\n.button-3:active {\r\n  background-color: #298e46;\r\n  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;\r\n}\r\n\r\n.sidenav {\r\n  width: 130px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 20px;\r\n  left: 10px;\r\n  background: #eee;\r\n  overflow-x: hidden;\r\n  padding: 8px 0;\r\n}"],"sourceRoot":""}]);
+  padding: 8px;
+}
+
+.sidenav li {
+  list-style: circle;
+  margin-bottom: 6px;
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAOA;EAGE;IACE,UAAA;IACA,YAAA;EAPF;AACF;AAUA;EAGE;IACE,UAAA;IACA,YAAA;EAVF;AACF;AAaA;EAGE;IACE,UAAA;IACA,YAAA;EAbF;AACF;AAkBA;EACE,YAAA;EACA,aAAA;AAhBF;;AAmBA;EACE,SAAA;EACA,UAAA;EACA,gBAAA;AAhBF;;AAmBA;EACE,oBAAA;EACA,iBAAA;AAhBF;;AAmBA;EACE,WAAA;EACA,qBAAA;EACA,yBAAA;EACA,eAAA;AAhBF;;AAmBA;EACE,WAAA;AAhBF;;AAmBA;EACE,SAAA;EACA,mBAAA;EACA,oCAAA;EACA,cAAA;AAhBF;;AAmBA;EACE,mBAAA;EACA,mBAAA;AAhBF;;AAmBA;EACE,WAAA;EACA,cAAA;EACA,WAAA;AAhBF;;AAmBA;EACE,UAAA;EACA,cAAA;AAhBF;;AAmBA;EACE,yBAAA;EACA,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,uCAAA;AAhBF;;AAoBA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,mBAAA;AAjBF;;AAoBA;EACE,YAAA;EACA,+BAAA;EACA,iBAAA;EACA,kBAAA;AAjBF;;AAoBA;EACE,OAAA;AAjBF;;AAqBA;EACE,mBAAA;EACA,4CAAA;EACA,sBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,+BAAA;AAlBF;;AAqBA;EACE,sBAAA;EACA,+BAAA;AAlBF;;AAqBA;EACE,aAAA;EACA,UAAA;EACA,cAAA;EACA,eAAA;EACA,8BAAA;EACA,SAAA;EACA,+CAAA;AAlBF;;AAqBA;EACE,iBAAA;EACA,gBAAA;AAlBF;;AAqBA;EACE,iBAAA;EACA,YAAA;EACA,iBAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;AAlBF;;AAqBA;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACA,uBAAA;EACA,qBAAA;EACA,sBAAA;EACA,+CAAA;EACA,kBAAA;EACA,SAAA;EACA,cAAA;AAlBF;;AAqBA,QAAA;AACA;EACE,gBAAA;EACA,yBAAA;EACA,wCAAA;EACA,kBAAA;EACA,yCAAA;EACA,sBAAA;EACA,WAAA;EACA,eAAA;EACA,qBAAA;EACA,sHAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,iBAAA;EACA,kBAAA;EACA,kBAAA;EACA,qBAAA;EACA,iBAAA;EACA,yBAAA;EACA,0BAAA;EACA,sBAAA;EACA,mBAAA;AAlBF;;AAqBA;EACE,gBAAA;EACA,aAAA;AAlBF;;AAqBA;EACE,yBAAA;AAlBF;;AAqBA;EACE,4CAAA;EACA,aAAA;AAlBF;;AAqBA;EACE,yBAAA;EACA,mCAAA;EACA,+BAAA;EACA,eAAA;AAlBF;;AAqBA;EACE,yBAAA;EACA,+CAAA;AAlBF;;AAqBA;EACE,YAAA;EACA,eAAA;EACA,UAAA;EACA,UAAA;EACA,mBAAA;EACA,UAAA;EACA,mBAAA;EACA,kBAAA;EACA,YAAA;AAlBF;;AAqBA;EACE,kBAAA;EACA,kBAAA;AAlBF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\n\r\n@media (max-width: 1920px) {\r\n  body {}\r\n\r\n  .monster-img {\r\n    width: 50%;\r\n    height: auto;\r\n  }\r\n}\r\n\r\n@media (max-width: 1440px) {\r\n  body {}\r\n  \r\n  .monster-img {\r\n    width: 70%;\r\n    height: auto;\r\n  }\r\n}\r\n\r\n@media (max-width: 360px) {\r\n  body {}\r\n  \r\n  .monster-img {\r\n    width: 20%;\r\n    height: auto;\r\n  }\r\n}\r\n\r\n\r\n\r\nnav {\r\n  float: right;\r\n  padding: 10px;\r\n}\r\n\r\nnav ul {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\nnav li {\r\n  display: inline-flex;\r\n  margin-left: 40px;\r\n}\r\n\r\nnav a {\r\n  color: #444;\r\n  text-decoration: none;\r\n  text-transform: uppercase;\r\n  font-size: 16px;\r\n}\r\n\r\nnav a:hover {\r\n  color: #000;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  background: #e6e6e6;\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 4;\r\n}\r\n\r\nheader {\r\n  background: #55d6aa;\r\n  margin-bottom: 12px;\r\n}\r\n\r\nheader::after {\r\n  content: '';\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.container {\r\n  width: 80%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.card {\r\n  background-color: #f7f7f7;\r\n  border-radius: 10px;\r\n  padding: 20px;\r\n  margin: 20px 0px;\r\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n\r\n}\r\n\r\n.form-group {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.form-group label {\r\n  width: 100px;\r\n  /* Fixed width for the labels */\r\n  text-align: right;\r\n  margin-right: 10px;\r\n}\r\n\r\n.form-group input {\r\n  flex: 1;\r\n}\r\n\r\n\r\n.card-anim {\r\n  border-radius: 10px;\r\n  box-shadow: 0 8px 12px rgba(24, 24, 24, 0.4);\r\n  background-color: #fff;\r\n  padding: 20px;\r\n  flex: 0 0 calc(33.33% - 100px);\r\n  transform: scale(1); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.2s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-anim:hover {\r\n  transform: scale(1.15); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.5s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-container {\r\n  display: flex;\r\n  width: 80%;\r\n  margin: 0 auto;\r\n  flex-wrap: wrap;\r\n  justify-content: space-between;\r\n  gap: 30px;\r\n  /* Adjust the gap as needed between the cards */\r\n}\r\n\r\n.title {\r\n  font-size: larger;\r\n  font-weight: 700;\r\n}\r\n\r\n.contents {\r\n  min-width: 1200px;\r\n  height: 100%;\r\n  min-height: 640px;\r\n  margin: 0 0 60px;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n\r\n.contents div[class^=\"text-area-\"] {\r\n  background-color: #473834;\r\n  width: 660px;\r\n  border-radius: 6px;\r\n  padding: 30px 30px 40px;\r\n  margin: 0 0 20px 20px;\r\n  box-sizing: border-box;\r\n  box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);\r\n  position: absolute;\r\n  bottom: 0;\r\n  color: #f4f4f4;\r\n}\r\n\r\n/* CSS */\r\n.button-3 {\r\n  appearance: none;\r\n  background-color: #2ea44f;\r\n  border: 1px solid rgba(27, 31, 35, .15);\r\n  border-radius: 6px;\r\n  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;\r\n  box-sizing: border-box;\r\n  color: #fff;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  font-family: -apple-system, system-ui, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\";\r\n  font-size: 14px;\r\n  font-weight: 600;\r\n  line-height: 20px;\r\n  padding: 6px 16px;\r\n  position: relative;\r\n  text-align: center;\r\n  text-decoration: none;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n  touch-action: manipulation;\r\n  vertical-align: middle;\r\n  white-space: nowrap;\r\n}\r\n\r\n.button-3:focus:not(:focus-visible):not(.focus-visible) {\r\n  box-shadow: none;\r\n  outline: none;\r\n}\r\n\r\n.button-3:hover {\r\n  background-color: #2c974b;\r\n}\r\n\r\n.button-3:focus {\r\n  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;\r\n  outline: none;\r\n}\r\n\r\n.button-3:disabled {\r\n  background-color: #94d3a2;\r\n  border-color: rgba(27, 31, 35, .1);\r\n  color: rgba(255, 255, 255, .8);\r\n  cursor: default;\r\n}\r\n\r\n.button-3:active {\r\n  background-color: #298e46;\r\n  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;\r\n}\r\n\r\n.sidenav {\r\n  width: 170px;\r\n  position: fixed;\r\n  z-index: 1;\r\n  top: 100px;\r\n  border-radius: 12px;\r\n  right: 0px;\r\n  background: #ffffff;\r\n  overflow-x: hidden;\r\n  padding: 8px;\r\n}\r\n\r\n.sidenav li {\r\n  list-style: circle;\r\n  margin-bottom: 6px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -667,9 +698,8 @@ function loadNavbar() {
     var navbarList = document.createElement("ul");
     var navbarElements = [
         "Home:index.html",
-        "Weapons:weapons.html",
-        "Monster:moster.html",
         "Armor:armor.html",
+        "About:about.html"
     ];
     navbarElements.forEach(function (element) {
         var nameFilePair = element.split(":");
@@ -767,6 +797,10 @@ var __webpack_exports__ = {};
   !*** ./src/armor.ts ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   favorites: () => (/* binding */ favorites),
+/* harmony export */   updateFavoritesList: () => (/* binding */ updateFavoritesList)
+/* harmony export */ });
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 /* harmony import */ var _shared_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared/navbar */ "./src/shared/navbar.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -811,6 +845,7 @@ var data = []; // Store all the data
 var currentPage = 1;
 var itemsPerPage = 10; // Number of items to load per page
 var favorites = new Set(); // Use a Set to store favorite elements
+
 function fetchDataFromApi(apiUrl, page) {
     return __awaiter(this, void 0, void 0, function () {
         var response, newData, error_1;

@@ -6,6 +6,7 @@ let currentPage = 1;
 const itemsPerPage = 10; // Number of items to load per page
 const favorites = new Set<ArmorElement>(); // Use a Set to store favorite elements
 
+export { favorites };
 async function fetchDataFromApi(apiUrl: string, page: number): Promise<any> {
   try {
     const response = await fetch(`${apiUrl}?page=${page}&size=${itemsPerPage}`);
@@ -102,6 +103,7 @@ interface ArmorElement {
   // defense: Defense
   assets: ArmorAssets;
 }
+export { ArmorElement };
 
 interface ArmorAssets {
   imageMale: string;
@@ -118,7 +120,7 @@ function toggleFavorite(armorElement: ArmorElement) {
 }
 
 
-function updateFavoritesList() {
+export function updateFavoritesList() {
   const favoritesList = document.getElementById('favorites-list');
   favoritesList.innerHTML = '';
 

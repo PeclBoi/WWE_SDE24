@@ -1,4 +1,4 @@
-    
+
 export function loadNavbar() {
 
     const navbarContainer = document.getElementById("navbar-container");

@@ -10,6 +10,7 @@ module.exports = {
   {
     main: './src/index.ts',
     armor: './src/armor.ts',
+    nav: "./src/shared/navbar.ts"
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -55,6 +56,11 @@ module.exports = {
       template: './src/html/armor.html',
       filename: 'armor.html',
       chunks: ['armor'],
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/html/about.html',
+      filename: 'about.html',
+      chunks: [],
     }),
   ],
 };

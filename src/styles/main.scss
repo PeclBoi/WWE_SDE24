@@ -4,6 +4,30 @@ $primary-color: #2fa8cc;
 $secondary-color: #f4f4f4;
 $box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1920px) {
+  body {}
+
+
+}
+
+@media (max-width: 1440px) {
+  body {}
+
+}
+
+@media (max-width: 360px) {
+  body {}
+  
+}
+
+
+
 nav {
   float: right;
   padding: 10px;
@@ -71,7 +95,8 @@ header::after {
 }
 
 .form-group label {
-  width: 100px; /* Fixed width for the labels */
+  width: 100px;
+  /* Fixed width for the labels */
   text-align: right;
   margin-right: 10px;
 }
@@ -85,8 +110,8 @@ header::after {
   border-radius: 10px;
   box-shadow: 0 8px 12px rgba(24, 24, 24, 0.4);
   background-color: #fff;
-  padding: 20px; 
-  flex: 0 0 calc(33.33% - 100px); 
+  padding: 20px;
+  flex: 0 0 calc(33.33% - 100px);
   transform: scale(1); // Add a hover effect, increase the scale for a zoom-in effect
   transition: transform 0.2s ease; // Add a smooth transition for the hover effect
 }
@@ -102,7 +127,8 @@ header::after {
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px; /* Adjust the gap as needed between the cards */
+  gap: 30px;
+  /* Adjust the gap as needed between the cards */
 }
 
 .title {
@@ -123,7 +149,7 @@ header::after {
   background-color: #473834;
   width: 660px;
   border-radius: 6px;
-  padding:30px 30px 40px;
+  padding: 30px 30px 40px;
   margin: 0 0 20px 20px;
   box-sizing: border-box;
   box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);
@@ -143,7 +169,7 @@ header::after {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;

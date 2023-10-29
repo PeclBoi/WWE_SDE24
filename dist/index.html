@@ -15,9 +15,9 @@
 
 
   <div class="contents">
-    <img id="introduction-img" />
+    <img id="introduction-img" class="monster-img"/>
     <div class="text-area-right">
-      <p>Bekämpfe riesige Monster an epischen Orten!</p>
+      <p class="title">Bekämpfe riesige Monster an epischen Orten!</p>
       <p>
         Indem du Monster fängst oder tötest, erhältst du Belohnungen in Form von Geld und Materialien,mit deren Hilfe du
         bessere Waffen und Rüstungen herstellen kannst,um stärkeren Monstern entgegenzutreten.
@@ -31,7 +31,7 @@
   <div class="contents">
     <img id="history-img" />
     <div class="text-area-right">
-      <p>Geschichte</p>
+      <p class="title">Geschichte</p>
       <p>
         Alle zehn Jahre ziehen Drachenälteste über das Meer zu einer riesigen Landmasse, die als Neue Welt bekannt ist;
         in einem Vorgang, den man Ältestenwanderung nennt.
@@ -50,14 +50,15 @@
   <div class="container">
     <div class="card">
       <form id="myForm">
+        <label>Registriere dich für aktuelle News:</label>
         <div class="form-group">
-          <label for="text-input">Text:</label>
+          <label for="text-input">Name:</label>
           <input type="text" id="text-input" required>
           <span class="error-message" id="text-error"></span>
         </div>
         <div class="form-group">
-          <label for="number-input">Number:</label>
-          <input type="number" id="number-input" required>
+          <label for="number-input">Alter:</label>
+          <input type="number" id="number-input" min="13" max="200" required>
           <span class="error-message" id="number-error"></span>
         </div>
         <div class="form-group">
@@ -70,7 +71,7 @@
           <input type="email" id="email-input" required>
           <span class="error-message" id="email-error"></span>
         </div>
-        <button type="submit">Submit</button>
+        <button class="button-3" type="submit">Submit</button>
       </form>
     </div>
   </div>
