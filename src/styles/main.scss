@@ -11,21 +11,70 @@ img {
 }
 
 @media (max-width: 1920px) {
-  body {}
-
-
+  .contents div[class^="text-area"] {
+    background-color: #473834;
+    width: 660px;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 30px 30px 40px;
+    margin: 0 0 20px 20px;
+    box-sizing: border-box;
+    box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);
+    position: absolute;
+    bottom: 0;
+    color: #f4f4f4;
+  }
 }
 
+.contents div[class^="text-area"] {
+  background-color: #473834;
+  width: 620px;
+  font-size: 18px;
+  border-radius: 6px;
+  padding: 30px 30px 40px;
+  margin: 0 0 20px 20px;
+  box-sizing: border-box;
+  box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);
+  position: absolute;
+  bottom: 0;
+  color: #f4f4f4;
+}
 @media (max-width: 1440px) {
-  body {}
-
+  .contents div[class^="text-area"] {
+    background-color: #473834;
+    width: 720px;
+    border-radius: 6px;
+    padding: 30px 30px 40px;
+    margin: 0 0 20px 20px;
+    font-size: 22px;
+    box-sizing: border-box;
+    box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);
+    position: absolute;
+    bottom: 0;
+    color: #f4f4f4;
+  }
 }
 
 @media (max-width: 360px) {
-  body {}
-  
-}
 
+  .monster-img {
+    visibility: hidden;
+  }
+
+  .contents div[class^="text-area"] {
+    background-color: #473834;
+    width: 300px;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 30px 30px 40px;
+    margin: 0 0 20px 20px;
+    box-sizing: border-box;
+    box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);
+    position: absolute;
+    bottom: 0;
+    color: #f4f4f4;
+  }
+}
 
 
 nav {
@@ -56,6 +105,7 @@ nav a:hover {
 }
 
 body {
+  width: auto;
   margin: 0;
   background: #e6e6e6;
   font-family: 'Work Sans', sans-serif;
@@ -137,7 +187,6 @@ header::after {
 }
 
 .contents {
-  min-width: 1200px;
   height: 100%;
   min-height: 640px;
   margin: 0 0 60px;
@@ -145,18 +194,6 @@ header::after {
   overflow: hidden;
 }
 
-.contents div[class^="text-area-"] {
-  background-color: #473834;
-  width: 660px;
-  border-radius: 6px;
-  padding: 30px 30px 40px;
-  margin: 0 0 20px 20px;
-  box-sizing: border-box;
-  box-shadow: 10px 6px 12px rgba(24, 24, 24, 0.6);
-  position: absolute;
-  bottom: 0;
-  color: #f4f4f4;
-}
 
 /* CSS */
 .button-3 {

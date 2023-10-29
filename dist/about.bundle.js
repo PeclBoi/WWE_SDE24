@@ -1,0 +1,2 @@
+(()=>{"use strict";var e,t,n;e=document.getElementById("navbar-container"),t=document.createElement("nav"),n=document.createElement("ul"),["Home:index.html","Armor:armor.html","About:about.html"].forEach((function(e){var t=e.split(":"),a=document.createElement("li"),m=document.createElement("a");m.text=t[0],m.href=t[1],a.appendChild(m),n.appendChild(a)})),t.appendChild(n),e.appendChild(t)})();
+//# sourceMappingURL=about.bundle.js.map

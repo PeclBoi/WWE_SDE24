@@ -1,10 +1,10 @@
 import './styles/main.scss';
 import { loadNavbar } from './shared/navbar';
 
-let data: any[] = []; // Store all the data
+let data: any[] = []; 
 let currentPage = 1;
-const itemsPerPage = 10; // Number of items to load per page
-const favorites = new Set<ArmorElement>(); // Use a Set to store favorite elements
+const itemsPerPage = 9;
+const favorites = new Set<ArmorElement>();
 
 export { favorites };
 async function fetchDataFromApi(apiUrl: string, page: number): Promise<any> {
@@ -24,13 +24,12 @@ async function fetchDataFromApi(apiUrl: string, page: number): Promise<any> {
 }
 
 async function fetchAndHandleData(page: number) {
-  const apiUrl = 'https://mhw-db.com/armor'; // Replace with your API URL
+  const apiUrl = 'https://mhw-db.com/armor'; 
 
   try {
     const newData = await fetchDataFromApi(apiUrl, page);
 
     if (newData.length === 0) {
-      // No more data to load
       document.getElementById('load-more-button').style.display = 'none';
       return;
     }
@@ -74,12 +73,11 @@ function createArmorCard(element: object) {
 
   const image = document.createElement('img');
   image.src = armorElement.assets.imageMale;
-  image.alt = `Image of ${armorElement.name}`; // Add meaningful alt text
+  image.alt = `Image of ${armorElement.name}`; 
   image.loading = "lazy";
 
-  // Add a "Favorite" button
   const favoriteButton = document.createElement('button');
-  favoriteButton.textContent = 'Mark as Favorite';
+  favoriteButton.textContent = 'Merken';
   favoriteButton.addEventListener('click', () => {
     toggleFavorite(armorElement);
   });
