@@ -118,7 +118,26 @@ header::after {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px; /* Adjust the gap as needed between the cards */
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,YAAA;EACA,aAAA;AAJF;;AAOA;EACE,SAAA;EACA,UAAA;EACA,gBAAA;AAJF;;AAOA;EACE,oBAAA;EACA,iBAAA;AAJF;;AAOA;EACE,WAAA;EACA,qBAAA;EACA,yBAAA;EACA,eAAA;AAJF;;AAOA;EACE,WAAA;AAJF;;AAOA;EACE,SAAA;EACA,gBAAA;EACA,oCAAA;EACA,gBAAA;AAJF;;AAOA;EACE,mBAAA;AAJF;;AAOA;EACE,WAAA;EACA,cAAA;EACA,WAAA;AAJF;;AAOA;EACE,UAAA;EACA,cAAA;AAJF;;AAOA;EACE,yBAAA;EACA,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,uCAAA;AAJF;;AAOA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,mBAAA;AAJF;;AAOA;EACE,YAAA,EAAA,+BAAA;EACA,iBAAA;EACA,kBAAA;AAJF;;AAOA;EACE,OAAA;AAJF;;AAQA;EACE,mBAAA;EACA,4CAAA;EACA,sBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,+BAAA;AALF;;AAQA;EACE,sBAAA;EACA,+BAAA;AALF;;AAQA;EACE,aAAA;EACA,UAAA;EACA,cAAA;EACA,eAAA;EACA,8BAAA;EACA,SAAA,EAAA,+CAAA;AALF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\nnav {\r\n  float: right;\r\n  padding: 10px;\r\n}\r\n\r\nnav ul {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\nnav li {\r\n  display: inline-flex;\r\n  margin-left: 40px;\r\n}\r\n\r\nnav a {\r\n  color: #444;\r\n  text-decoration: none;\r\n  text-transform: uppercase;\r\n  font-size: 16px;\r\n}\r\n\r\nnav a:hover {\r\n  color: #000;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  background: #222;\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 400;\r\n}\r\n\r\nheader {\r\n  background: #55d6aa;\r\n}\r\n\r\nheader::after {\r\n  content: '';\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.container {\r\n  width: 80%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.card {\r\n  background-color: #f7f7f7;\r\n  border-radius: 10px;\r\n  padding: 20px;\r\n  margin-top: 20px;\r\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.form-group {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.form-group label {\r\n  width: 100px; /* Fixed width for the labels */\r\n  text-align: right;\r\n  margin-right: 10px;\r\n}\r\n\r\n.form-group input {\r\n  flex: 1;\r\n}\r\n\r\n\r\n.card-anim {\r\n  border-radius: 10px;\r\n  box-shadow: 0 8px 12px rgba(24, 24, 24, 0.4);\r\n  background-color: #fff;\r\n  padding: 20px; \r\n  flex: 0 0 calc(33.33% - 100px); \r\n  transform: scale(1); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.2s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-anim:hover {\r\n  transform: scale(1.15); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.5s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-container {\r\n  display: flex;\r\n  width: 80%;\r\n  margin: 0 auto;\r\n  flex-wrap: wrap;\r\n  justify-content: space-between;\r\n  gap: 30px; /* Adjust the gap as needed between the cards */\r\n}"],"sourceRoot":""}]);
+}
+
+.contents {
+  min-width: 1200px;
+  height: 100%;
+  min-height: 640px;
+  margin: 0 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contents div[class^=text-area-] {
+  background-color: #271f1d;
+  width: 660px;
+  padding: 30px 30px 40px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  color: #f4f4f4;
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAMA;EACE,YAAA;EACA,aAAA;AAJF;;AAOA;EACE,SAAA;EACA,UAAA;EACA,gBAAA;AAJF;;AAOA;EACE,oBAAA;EACA,iBAAA;AAJF;;AAOA;EACE,WAAA;EACA,qBAAA;EACA,yBAAA;EACA,eAAA;AAJF;;AAOA;EACE,WAAA;AAJF;;AAOA;EACE,SAAA;EACA,gBAAA;EACA,oCAAA;EACA,gBAAA;AAJF;;AAOA;EACE,mBAAA;AAJF;;AAOA;EACE,WAAA;EACA,cAAA;EACA,WAAA;AAJF;;AAOA;EACE,UAAA;EACA,cAAA;AAJF;;AAOA;EACE,yBAAA;EACA,mBAAA;EACA,aAAA;EACA,gBAAA;EACA,uCAAA;AAJF;;AAOA;EACE,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,mBAAA;AAJF;;AAOA;EACE,YAAA,EAAA,+BAAA;EACA,iBAAA;EACA,kBAAA;AAJF;;AAOA;EACE,OAAA;AAJF;;AAQA;EACE,mBAAA;EACA,4CAAA;EACA,sBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,+BAAA;AALF;;AAQA;EACE,sBAAA;EACA,+BAAA;AALF;;AAQA;EACE,aAAA;EACA,UAAA;EACA,cAAA;EACA,eAAA;EACA,8BAAA;EACA,SAAA,EAAA,+CAAA;AALF;;AAQA;EACE,iBAAA;EACA,YAAA;EACA,iBAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;AALF;;AAQA;EACE,yBAAA;EACA,YAAA;EACA,uBAAA;EACA,sBAAA;EACA,kBAAA;EACA,SAAA;EACA,cAAA;AALF","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\r\n\r\n$primary-color: #2fa8cc;\r\n$secondary-color: #f4f4f4;\r\n$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);\r\n\r\nnav {\r\n  float: right;\r\n  padding: 10px;\r\n}\r\n\r\nnav ul {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\nnav li {\r\n  display: inline-flex;\r\n  margin-left: 40px;\r\n}\r\n\r\nnav a {\r\n  color: #444;\r\n  text-decoration: none;\r\n  text-transform: uppercase;\r\n  font-size: 16px;\r\n}\r\n\r\nnav a:hover {\r\n  color: #000;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  background: #222;\r\n  font-family: 'Work Sans', sans-serif;\r\n  font-weight: 400;\r\n}\r\n\r\nheader {\r\n  background: #55d6aa;\r\n}\r\n\r\nheader::after {\r\n  content: '';\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.container {\r\n  width: 80%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.card {\r\n  background-color: #f7f7f7;\r\n  border-radius: 10px;\r\n  padding: 20px;\r\n  margin-top: 20px;\r\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.form-group {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.form-group label {\r\n  width: 100px; /* Fixed width for the labels */\r\n  text-align: right;\r\n  margin-right: 10px;\r\n}\r\n\r\n.form-group input {\r\n  flex: 1;\r\n}\r\n\r\n\r\n.card-anim {\r\n  border-radius: 10px;\r\n  box-shadow: 0 8px 12px rgba(24, 24, 24, 0.4);\r\n  background-color: #fff;\r\n  padding: 20px; \r\n  flex: 0 0 calc(33.33% - 100px); \r\n  transform: scale(1); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.2s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-anim:hover {\r\n  transform: scale(1.15); // Add a hover effect, increase the scale for a zoom-in effect\r\n  transition: transform 0.5s ease; // Add a smooth transition for the hover effect\r\n}\r\n\r\n.card-container {\r\n  display: flex;\r\n  width: 80%;\r\n  margin: 0 auto;\r\n  flex-wrap: wrap;\r\n  justify-content: space-between;\r\n  gap: 30px; /* Adjust the gap as needed between the cards */\r\n}\r\n\r\n.contents {\r\n  min-width: 1200px;\r\n  height: 100%;\r\n  min-height: 640px;\r\n  margin: 0 0 60px;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n\r\n.contents div[class^=\"text-area-\"] {\r\n  background-color: #271f1d;\r\n  width: 660px;\r\n  padding: 30px 30px 40px;\r\n  box-sizing: border-box;\r\n  position: absolute;\r\n  bottom: 0;\r\n  color: #f4f4f4;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -565,6 +584,60 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/formValidation.ts":
+/*!*******************************!*\
+  !*** ./src/formValidation.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var FormValidation = /** @class */ (function () {
+    function FormValidation() {
+    }
+    FormValidation.prototype.validateForm = function () {
+        var textInput = document.getElementById('text-input');
+        var numberInput = document.getElementById('number-input');
+        var passwordInput = document.getElementById('password-input');
+        var emailInput = document.getElementById('email-input');
+        var textError = document.getElementById('text-error');
+        var numberError = document.getElementById('number-error');
+        var passwordError = document.getElementById('password-error');
+        var emailError = document.getElementById('email-error');
+        textError.textContent = '';
+        numberError.textContent = '';
+        passwordError.textContent = '';
+        emailError.textContent = '';
+        var textValue = textInput.value;
+        var numberValue = numberInput.valueAsNumber;
+        var passwordValue = passwordInput.value;
+        var emailValue = emailInput.value;
+        if (textValue.length < 3) {
+            textError.textContent = 'Text must be at least 3 characters.';
+        }
+        if (isNaN(numberValue) || numberValue < 0) {
+            numberError.textContent = 'Number must be a positive number.';
+        }
+        if (passwordValue.length < 8) {
+            passwordError.textContent = 'Password must be at least 8 characters.';
+        }
+        if (!this.validateEmail(emailValue)) {
+            emailError.textContent = 'Invalid email format.';
+        }
+    };
+    FormValidation.prototype.validateEmail = function (email) {
+        var emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+        return emailRegex.test(email);
+    };
+    return FormValidation;
+}());
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FormValidation);
+
+
+/***/ }),
+
 /***/ "./src/shared/navbar.ts":
 /*!******************************!*\
   !*** ./src/shared/navbar.ts ***!
@@ -729,55 +802,26 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/navbar */ "./src/shared/navbar.ts");
 /* harmony import */ var _assets_cover_image_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/cover_image.jpg */ "./src/assets/cover_image.jpg");
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _formValidation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./formValidation */ "./src/formValidation.ts");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+
 
 
 
 (0,_shared_navbar__WEBPACK_IMPORTED_MODULE_0__.loadNavbar)();
 loadImages();
 function loadImages() {
-    var introImage = document.getElementById("introduction-image");
+    var introImage = document.getElementById("introduction-img");
     introImage.src = _assets_cover_image_jpg__WEBPACK_IMPORTED_MODULE_1__;
+    introImage.width = 1200;
+    introImage.height = 590;
 }
 var form = document.getElementById('myForm');
 form.addEventListener('submit', function (event) {
+    var formValidation = new _formValidation__WEBPACK_IMPORTED_MODULE_2__["default"]();
     event.preventDefault();
-    validateForm();
+    formValidation.validateForm();
 });
-function validateForm() {
-    var textInput = document.getElementById('text-input');
-    var numberInput = document.getElementById('number-input');
-    var passwordInput = document.getElementById('password-input');
-    var emailInput = document.getElementById('email-input');
-    var textError = document.getElementById('text-error');
-    var numberError = document.getElementById('number-error');
-    var passwordError = document.getElementById('password-error');
-    var emailError = document.getElementById('email-error');
-    textError.textContent = '';
-    numberError.textContent = '';
-    passwordError.textContent = '';
-    emailError.textContent = '';
-    var textValue = textInput.value;
-    var numberValue = numberInput.valueAsNumber;
-    var passwordValue = passwordInput.value;
-    var emailValue = emailInput.value;
-    if (textValue.length < 3) {
-        textError.textContent = 'Text must be at least 3 characters.';
-    }
-    if (isNaN(numberValue) || numberValue < 0) {
-        numberError.textContent = 'Number must be a positive number.';
-    }
-    if (passwordValue.length < 8) {
-        passwordError.textContent = 'Password must be at least 8 characters.';
-    }
-    if (!validateEmail(emailValue)) {
-        emailError.textContent = 'Invalid email format.';
-    }
-}
-function validateEmail(email) {
-    var emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
-    return emailRegex.test(email);
-}
 
 })();
 
