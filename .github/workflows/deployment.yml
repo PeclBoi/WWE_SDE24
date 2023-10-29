@@ -41,7 +41,7 @@ jobs:
            run: npm run build
          
          - name: Create and upload artifact for GitHub Pages
-           uses: actions/upload-github-pages-artifact@v1
+           uses: actions/upload-pages-artifact@v2
            with:
              name: 'wee_artifact' # Optional, custom artifact name
              path: './dist' # Specify the path to your static assets directory
